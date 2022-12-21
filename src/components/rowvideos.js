@@ -42,7 +42,7 @@ function Row(props) {
           ❮
         </button>
         <div
-          className="carousel carousel-center rounded px-1 py-3 mx-5 transition-height duration-500 h-56 hover:h-[400px]"
+          className="carousel carousel-center rounded px-1 py-3 mx-5 transition-height duration-500 h-56 hover:h-[400px] snap-none"
           id="id-1"
           ref={containerRef}
         >
