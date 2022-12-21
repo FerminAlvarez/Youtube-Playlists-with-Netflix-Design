@@ -2,8 +2,6 @@ import { useEffect, useState, useRef } from "react";
 import { fetchData } from "../services/playlist";
 import VideoCard from "./videocard";
 
-
-
 function Row(props) {
   const containerRef = useRef();
 
@@ -11,7 +9,7 @@ function Row(props) {
   const [nextPageToken, setNextPageToken] = useState();
   const [hasMore, setHasMore] = useState(true);
 
-  const accessToken = window.localStorage.getItem('ACCESS_TOKEN');
+  const accessToken = window.localStorage.getItem("ACCESS_TOKEN");
 
   useEffect(() => {
     getData();
@@ -24,10 +22,12 @@ function Row(props) {
     setHasMore(response.data.nextPageToken ? true : false);
   }
 
-  const scrollRow = (scrollOffset) => {
-    if (scrollOffset > 0 && hasMore) getData();
-    containerRef.current.scrollLeft += scrollOffset;
-  };
+  async function scrollRow(scrollOffset) {
+    if (scrollOffset > 0 && hasMore) await getData();
+    setTimeout(() => {
+      containerRef.current.scrollLeft += scrollOffset;
+    }, 100);
+  }
 
   return (
     <>
@@ -46,18 +46,20 @@ function Row(props) {
           id="id-1"
           ref={containerRef}
         >
-          {videos.map((item, id) => (
-            JSON.stringify(item.snippet.thumbnails) !== '{}' &&
-            <VideoCard
-              image={item.snippet.thumbnails.medium.url}
-              title={item.snippet.title}
-              link={
-                "https://www.youtube.com/watch?v=" +
-                item.snippet.resourceId.videoId
-              }
-              id={id}
-            />
-          ))}
+          {videos.map(
+            (item, id) =>
+              JSON.stringify(item.snippet.thumbnails) !== "{}" && (
+                <VideoCard
+                  image={item.snippet.thumbnails.medium.url}
+                  title={item.snippet.title}
+                  link={
+                    "https://www.youtube.com/watch?v=" +
+                    item.snippet.resourceId.videoId
+                  }
+                  id={id}
+                />
+              )
+          )}
         </div>
         <button
           className="btn btn-circle"
