@@ -25,7 +25,7 @@ function MovieCard(props) {
         </figure>
         {isHovering && (
           <div className="card-body">
-            <h2 className="card-text font-medium text-white">{props.title}</h2>
+            <h2 className="card-text font-medium dark:text-white text-black">{props.title}</h2>
             <div className="card-actions justify-center">
               <button className="btn btn-primary" >
                 Watch Now

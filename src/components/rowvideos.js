@@ -31,7 +31,7 @@ function Row(props) {
 
   return (
     <>
-      <h2 className="text-white font-semibold text-3xl px-4 text-left mx-20  mt-5">
+      <h2 className="dark:text-white text-black font-semibold text-3xl px-4 text-left mx-20  mt-5">
         {props.title}
       </h2>
       <div className="relative flex items-center mx-5 pb-2">
