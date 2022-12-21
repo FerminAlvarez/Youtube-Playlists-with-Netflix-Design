@@ -14,12 +14,15 @@ export default function Hero() {
           </h1>
 
           <p class="max-w-3xl mx-auto mt-6 text-lg text-center text-gray-700 dark:text-white md:text-xl">
-            <span className="font-bold">¡Bienvenidos a nuestra página web!</span> Aquí podrás ver todos los vídeos
-            de tus listas de reproducción de <span className="font-bold">YouTube</span>, ordenadas y presentadas de
-            una manera más atractiva y fácil de usar. <br />
+            <span className="font-bold">Welcome to our website! </span>
+            Here you will be able to see all the videos from your
+            <span className="font-bold"> YouTube playlists</span>, ordered and
+            presented in a more attractive and easy-to-use way.
             <br />
-            Esperamos que la página web sea de tu agrado y que puedas disfrutarla.
-            <span className="font-bold">¡Gracias por visitarnos!</span>
+            <br /> We hope that the web page is to your liking and that you can
+            enjoy it.
+            <br /> <br />
+            <span className="font-bold">Thanks for visiting us!</span>
           </p>
         </div>
       </section>
