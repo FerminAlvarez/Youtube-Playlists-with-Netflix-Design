@@ -2,8 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { fetchData } from "../services/playlist";
 import VideoCard from "./videocard";
 
-let accessToken =
-  "ya29.a0AX9GBdVehuvrOv0onOiSXveCLe7db74De__hVchrx3gGkT-FrZnJz5cGqwiN2sy6evbsoivUzJ1aWsUitMO9Vp8N76q3wNtclVCtynqU9jM-BbdfhB9nbJC9JZcZq-LjkFey1ljoyC_M9RWrEe9eYAWF5Rv2tQaCgYKAVoSARISFQHUCsbCGzGgTcV_b17d_Mk7u1GuUg0165";
+
 
 function Row(props) {
   const containerRef = useRef();
@@ -12,10 +11,10 @@ function Row(props) {
   const [nextPageToken, setNextPageToken] = useState();
   const [hasMore, setHasMore] = useState(true);
 
+  const accessToken = window.localStorage.getItem('ACCESS_TOKEN');
+
   useEffect(() => {
     getData();
-    if(hasMore)
-      getData();
   }, []);
 
   async function getData() {

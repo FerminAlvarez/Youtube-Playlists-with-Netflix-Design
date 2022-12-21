@@ -8,8 +8,13 @@ function Login(props) {
       imageUrl: res.profileObj.imageUrl,
       accessToken: res.accessToken,
     });
-    console.log(res.accessToken)
+    manageStorage(res.accessToken);
   };
+
+  function manageStorage(accessToken) {
+    window.localStorage.setItem("ACCESS_TOKEN", accessToken);
+    window.dispatchEvent(new Event("storage"));
+  }
 
   const onFailure = (res) => {
     console.log("Something went wrong");

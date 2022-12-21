@@ -4,7 +4,13 @@ import { clientID } from "../config/oauth";
 function Logout(props) {
   const onSuccess = () => {
     props.setUser({});
+    manageStorage();
   };
+
+  function manageStorage() {
+    window.localStorage.removeItem('ACCESS_TOKEN');
+    window.dispatchEvent(new Event("storage"));
+  }
 
   return (
     <div className="dropdown dropdown-end">
