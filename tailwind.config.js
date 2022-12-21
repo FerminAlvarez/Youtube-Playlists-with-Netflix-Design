@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        height: "height",
+      },
+      variants: {
+        height: ["hover"],
+      },
+    },
   },
   plugins: [require("daisyui")],
-}
+};
