@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import data from "../services/playlist";
 import VideoCard from "./videocard";
 
-function Row() {
+function Row(props) {
   const [videos, setVideos] = useState([]);
   const containerRef = useRef();
 
@@ -20,7 +20,7 @@ function Row() {
 
   return (
     <>
-      <h2 className="text-white font-semibold text-3xl px-4 text-left mx-20">Playlist 1</h2>
+      <h2 className="text-white font-semibold text-3xl px-4 text-left mx-20">{props.title} - {props.id}</h2>
       <div className="relative flex items-center mx-5 pb-2">
         <button
           className="btn btn-circle"
@@ -29,7 +29,7 @@ function Row() {
           ❮
         </button>
         <div
-          class="carousel carousel-center rounded px-1 py-3 mx-5 transition-height duration-500 h-48 hover:h-72"
+          className="carousel carousel-center rounded px-1 py-3 mx-5 transition-height duration-500 h-48 hover:h-72"
           id="id-1"
           ref={containerRef}
         >

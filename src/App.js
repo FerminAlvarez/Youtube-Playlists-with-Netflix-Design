@@ -1,16 +1,12 @@
 import "./App.css";
 import Navbar from "./components/navbar";
-import Row from "./components/rowvideos";
+import Rows from "./components/rows";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
+      <Rows />
     </div>
   );
 }
