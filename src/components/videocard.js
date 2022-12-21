@@ -14,7 +14,7 @@ function MovieCard(props) {
   return (
     <div
       className={
-        "card w-[266px] inline-block cursor-pointer relative p-2 carousel-item transform transition duration-500 hover:scale-110 hover:bg-gray-800" 
+        "card w-[330px] inline-block cursor-pointer relative p-2 carousel-item transform transition duration-500 hover:scale-105 hover:bg-gray-800" 
           + (isHovering ? "shadow-xl image-full" : "")
       }
       onMouseOver={handleMouseOver}

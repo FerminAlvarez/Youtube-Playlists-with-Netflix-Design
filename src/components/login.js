@@ -8,6 +8,7 @@ function Login(props) {
       imageUrl: res.profileObj.imageUrl,
       accessToken: res.accessToken,
     });
+    console.log(res.accessToken)
   };
 
   const onFailure = (res) => {
