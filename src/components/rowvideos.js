@@ -33,7 +33,7 @@ function Row(props) {
   return (
     <>
       <h2 className="text-white font-semibold text-3xl px-4 text-left mx-20">
-        {props.title} - {props.id}
+        {props.title}
       </h2>
       <div className="relative flex items-center mx-5 pb-2">
         <button
@@ -43,7 +43,7 @@ function Row(props) {
           ❮
         </button>
         <div
-          className="carousel carousel-center rounded px-1 py-3 mx-5 transition-height duration-500 h-56 hover:h-72"
+          className="carousel carousel-center rounded px-1 py-3 mx-5 transition-height duration-500 h-56 hover:h-[400px]"
           id="id-1"
           ref={containerRef}
         >
