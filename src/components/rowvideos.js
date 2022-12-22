@@ -57,6 +57,7 @@ function Row(props) {
                     item.snippet.resourceId.videoId
                   }
                   id={id}
+                  key={id}
                 />
               )
           )}

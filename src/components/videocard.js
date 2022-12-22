@@ -19,9 +19,9 @@ function MovieCard(props) {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <a href={props.link} target="_blank">
+      <a href={props.link} target="_blank" rel="noreferrer">
         <figure className="rounded-lg">
-          <img src={props.image} />
+          <img src={props.image} alt={props.title} />
         </figure>
         {isHovering && (
           <div className="card-body">
